@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "HelveticaNeueCyr-Thin";
+  src:url("../fonts/HelveticaNeueCyr-Thin.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "HelveticaNeueCyr-Roman";
+  src:url("../fonts/HelveticaNeueCyr-Roman.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "HelveticaNeueCyr-Bold";
+  src:url("../fonts/HelveticaNeueCyr-Bold.ttf");
+  font-style: normal;
+  font-weight: normal;
+}

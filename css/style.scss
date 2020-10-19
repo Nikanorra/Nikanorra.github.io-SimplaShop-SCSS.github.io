@@ -1,0 +1,124 @@
+$colorGreen: #78b660;
+$colorInd: #e2e2e1;
+$colorText: #363636;
+$colorTextMenu: #000;
+$font14: 14px;
+$font: "HelveticaNeueCyr-Thin", sans-serif;
+$fontBold: "HelveticaNeueCyr-Bold", sans-serif;
+$fontRoman: "HelveticaNeueCyr-Roman", sans-serif;
+$border: 2px solid $colorGreen;
+
+.container {
+  font-size: $font14;
+  color: $colorText;
+}
+@mixin headerMixin {
+  margin-top: 32px;
+  display: flex;
+}
+header {
+  @include headerMixin;
+}
+
+@mixin menu {
+  margin-right: 2%;
+  margin-left: 2%;
+  font-size: 14px;
+  font-family: $font;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 5px;
+  transition: 1s;
+  list-style-type: none;
+}
+.menu ul li {
+  @include menu;
+  &:hover {
+    border-bottom: $border;
+  }
+}
+
+.row {
+  align-items: center;
+}
+
+@mixin contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.contacts {
+  @include contact
+  .contacts__text {
+    font-family: $fontRoman;
+    font-size: 14px;
+    align-self: flex-end;
+  }
+  .contacts__phone {
+    font-size: 18px;
+  }
+}
+
+
+#flower {
+  display: flex;
+  align-self: center;
+}
+/*end of header*/
+
+/*slider*/
+.brace {
+  fill: $colorGreen;
+}
+.brace1 {
+  fill: $colorGreen;
+  transform: rotate(180deg);
+}
+.carousel-item {
+  display: flex;
+}
+.slider__text {
+  display: flex;
+}
+.slider_pic {
+  width: auto;
+}
+.slider .container .col-7 {
+  position: relative;
+}
+.slider .container .col-10 .slider__text {
+  position: absolute;
+  bottom: 515px;
+  top: 120px;
+}
+.slider__text_position {
+  flex-direction: column;
+}
+.slider__text__title {
+  font-family: $fontBold;
+  font-size: 30px;
+}
+.slider__text__item {
+  font-family: $font;
+  font-size: 23px;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+}
+.slider__text__sale {
+  font-family: $fontBold;
+  font-size: 23px;
+  color: $colorGreen;
+  align-self: flex-end;
+}
+.footer {
+  font-family: $font;
+  text-align: center;
+  margin-bottom: 120px;
+}
+.footer_title {
+  font-size: 30px;
+  line-height: 100px;
+}
+.footer_descr {
+  font-size: 14px;
+}
