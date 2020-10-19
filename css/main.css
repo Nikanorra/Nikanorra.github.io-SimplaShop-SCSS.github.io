@@ -98,7 +98,7 @@ a {
   display: flex;
 }
 /*header*/
-header {
+/* header {
   margin-top: 32px;
   color: #363636;
 }
@@ -138,11 +138,11 @@ header {
 #flower {
   display: flex;
   align-self: center;
-}
+} */
 /*end of header*/
 
 /*slider*/
-.brace {
+/* .brace {
   fill: #78b660;
 }
 .brace1 {
@@ -197,4 +197,4 @@ header {
 }
 .footer_descr {
   font-size: 14px;
-}
+} */

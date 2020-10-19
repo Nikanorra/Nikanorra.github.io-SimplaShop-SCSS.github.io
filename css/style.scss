@@ -30,7 +30,7 @@ header {
   transition: 1s;
   list-style-type: none;
 }
-.menu ul li {
+.menu ul li{
   @include menu;
   &:hover {
     border-bottom: $border;
@@ -47,7 +47,7 @@ header {
   align-items: flex-end;
 }
 .contacts {
-  @include contact
+  @include contact;
   .contacts__text {
     font-family: $fontRoman;
     font-size: 14px;
