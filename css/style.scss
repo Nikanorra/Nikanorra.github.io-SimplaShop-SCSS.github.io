@@ -30,6 +30,9 @@ header {
   transition: 1s;
   list-style-type: none;
 }
+.menu ul {
+  display: flex;
+}
 .menu ul li{
   @include menu;
   &:hover {

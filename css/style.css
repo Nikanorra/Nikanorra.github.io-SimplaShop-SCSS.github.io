@@ -6,6 +6,9 @@ header {
   margin-top: 32px;
   display: flex; }
 
+.menu ul {
+  display: flex; }
+
 .menu ul li {
   margin-right: 2%;
   margin-left: 2%;
