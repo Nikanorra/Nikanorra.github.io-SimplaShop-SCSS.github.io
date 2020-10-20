@@ -71,6 +71,7 @@ header {
 /*slider*/
 .brace {
   fill: $colorGreen;
+  margin-right: 17px;
 }
 .brace1 {
   fill: $colorGreen;
@@ -85,13 +86,20 @@ header {
 .slider_pic {
   width: auto;
 }
-.slider .container .col-7 {
-  position: relative;
+.slider .container .col-6 {
+  display: flex;
+  justify-content: center;
 }
-.slider .container .col-10 .slider__text {
+.slider .container .col-6 .slider__text {
   position: absolute;
-  bottom: 515px;
   top: 120px;
+}
+.slider_img {
+  background-image: url("../img/slide_01.png");
+  width: 1140px;
+  height: 670px;
+  position: relative;
+  z-index: 0;
 }
 .slider__text_position {
   flex-direction: column;
@@ -99,24 +107,29 @@ header {
 .slider__text__title {
   font-family: $fontBold;
   font-size: 30px;
+  margin-bottom: 13px;
 }
 .slider__text__item {
   font-family: $font;
   font-size: 23px;
   display: flex;
-  flex-direction: row;
-  align-self: flex-start;
+  margin-top: 20px;
+
 }
 .slider__text__sale {
   font-family: $fontBold;
-  font-size: 23px;
+  font-size: 52px;
   color: $colorGreen;
+  height: 50px;
   align-self: flex-end;
+  margin-left: 15px;
 }
 .footer {
   font-family: $font;
   text-align: center;
-  margin-bottom: 120px;
+  position: absolute;
+  bottom: 0;
+
 }
 .footer_title {
   font-size: 30px;
@@ -124,4 +137,22 @@ header {
 }
 .footer_descr {
   font-size: 14px;
+}
+.indicator {
+  position: absolute;
+  width: auto;
+  bottom: 0;
+  margin-bottom: 200px;
+  display: flex;
+}
+.indicator_1, .indicator_2, .indicator_3 {
+  display: block;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: $colorInd;
+  margin: 0 9px;
+}
+.active {
+  background-color: $colorGreen;
 }
