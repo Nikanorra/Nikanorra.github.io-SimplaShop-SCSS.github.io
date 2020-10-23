@@ -361,13 +361,12 @@ line-height: 25px;
       width: 100%;
     }
     .footer {
-      bottom: 50%;
+      bottom: 0;
     }
     .slider_img {
-    height: 100vh;
+    min-height: 410px;
     }
-    .size {
-      height: 100vh;
-      min-height: 500px;
-    }
+.size {
+  height: 100vh;
+}
   }
