@@ -76,8 +76,8 @@ body, p, h3 {
 	margin: 0 auto;
 }
 body {
+  height: 100vh;
   width: 100%;
-  min-width: 320px;
   font-family: "HelveticaNeueCyr-Thin", sans-serif;
 }
 div {
@@ -92,10 +92,9 @@ a {
   clear: both;
 }
 
-.container, .col-12 {
+.container {
   max-width: 1140px;
   min-width: 320px;
-  display: flex;
   padding: 0;
 	margin: 0 auto;
 }

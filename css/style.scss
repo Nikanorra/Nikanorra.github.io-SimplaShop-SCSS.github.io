@@ -14,11 +14,17 @@ $fontBold: "HelveticaNeueCyr-Bold", sans-serif;
 $fontRoman: "HelveticaNeueCyr-Roman", sans-serif;
 $border: 2px solid $colorGreen;
 
-
+.row {
+  display: flex;
+}
+.size {
+  background: $gradient;
+}
 @mixin headerMixin {
   // margin-top: 32px;
   display: flex;
-  background: $gradient;
+  flex-direction: row;
+
 }
 header {
   @include headerMixin;
@@ -193,7 +199,6 @@ header {
 }
 
 .slider__wrapper {
-    width: 1140px;
     height: 670px;
     position: relative;
     z-index: 0
