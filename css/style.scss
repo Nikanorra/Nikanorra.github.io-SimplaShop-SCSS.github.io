@@ -1,3 +1,9 @@
+img {
+  max-width: 100%;
+  min-width: 300px;
+  height: auto;
+}
+
 $gradient: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(255,255,255,0) 100%);
 $colorGreen: #78b660;
 $colorInd: #e2e2e1;
@@ -249,7 +255,9 @@ header {
 .slick-prev.slick-arrow, .slick-next.slick-arrow {
   display: none !important;
 }
-
+// .slick-track {
+//   max-width: 100% !important;
+// }
 
 .footer {
   font-family: $font;
@@ -265,3 +273,57 @@ header {
 .footer_descr {
   font-size: 14px;
 }
+
+@media screen and (max-width: 950px) {
+  .slick-dots {
+    top: 50%;
+  }
+  .slider__text__title {
+    font-size: 25px;
+  }
+  .slider__text__item {
+    font-size: 18px;
+  }
+  .slider__text__sale {
+    font-size: 45px;
+  }
+  .slick-dots {
+    width: 50%;
+  }
+  .slick-dots li button:before {
+    font-size: 20px;
+  }
+  }
+
+  @media screen and (max-width: 850px) {
+  .slick-dots {
+    top: 40%;
+    }
+    .slider__text__title {
+      font-size: 20px;
+    }
+    .slider__text__item {
+      font-size: 15px;
+      margin-top: 15px;
+    }
+    .slider__text__sale {
+      font-size: 40px;
+    }
+    .footer_title {
+    font-size: 20px;
+    line-height: 40px;
+}
+  }
+
+  @media screen and (max-width: 670px) {
+    .slider__text__title {
+      font-size: 17px;
+    }
+    .slider__text__item {
+      font-size: 12px;
+    }
+    .footer_title {
+    font-size: 20px !important;
+    line-height: 80px;
+}
+  }
