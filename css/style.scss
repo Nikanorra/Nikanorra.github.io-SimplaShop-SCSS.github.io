@@ -14,10 +14,16 @@ $fontBold: "HelveticaNeueCyr-Bold", sans-serif;
 $fontRoman: "HelveticaNeueCyr-Roman", sans-serif;
 $border: 2px solid $colorGreen;
 
-header {
+
+@mixin headerMixin {
+  // margin-top: 32px;
+  display: flex;
   background: $gradient;
-  width: 100%;
 }
+header {
+  @include headerMixin;
+}
+
 .container {
   font-size: $font14;
   color: $colorText;
@@ -39,13 +45,6 @@ header {
   position: absolute;
   right: 0;
   bottom: 0;
-}
-@mixin headerMixin {
-  margin-top: 32px;
-  display: flex;
-}
-header {
-  @include headerMixin;
 }
 
 @mixin menu {
