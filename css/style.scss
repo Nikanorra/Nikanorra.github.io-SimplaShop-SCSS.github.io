@@ -1,5 +1,10 @@
 $colorGreen: #78b660;
 $colorInd: #e2e2e1;
+$colorSubmenu1: #d7e9ce;
+$colorSubmenu2: #f2f2f2;
+$transparentMenuBg: 0.9;
+$colorBgSubmenu1: fade-out(rgba($colorSubmenu1, $transparentMenuBg), 0);
+$colorBgSubmenu2: fade-out(rgba($colorSubmenu2, $transparentMenuBg), 0);
 $colorText: #363636;
 $colorTextMenu: #000;
 $font14: 14px;
@@ -8,9 +13,13 @@ $fontBold: "HelveticaNeueCyr-Bold", sans-serif;
 $fontRoman: "HelveticaNeueCyr-Roman", sans-serif;
 $border: 2px solid $colorGreen;
 
+
 .container {
   font-size: $font14;
   color: $colorText;
+  font-family: $font;
+  font-size: 14px;
+  flex-wrap: wrap;
 }
 @mixin headerMixin {
   margin-top: 32px;
@@ -21,24 +30,94 @@ header {
 }
 
 @mixin menu {
-  margin-right: 2%;
-  margin-left: 2%;
-  font-size: 14px;
-  font-family: $font;
   border-bottom: 2px solid transparent;
   padding-bottom: 5px;
+  line-height: 26px;
   transition: 1s;
   list-style-type: none;
 }
-.menu ul {
+
+.menu > ul {
   display: flex;
+  justify-content: space-between;
+  position: relative;
 }
-.menu ul li{
+
+.menu__link {
   @include menu;
+
   &:hover {
     border-bottom: $border;
   }
 }
+
+@mixin dropMenu ($position: absolute, $padding: 15px 20px, $top: 20px, $color: $colorBgSubmenu1, $width: 250px, $zIndex: 10, $display: none) {
+  position: $position;
+  padding: $padding;
+  top: $top;
+  background-color: $color;
+  width: $width;
+  z-index: $zIndex;
+  display: $display;
+}
+
+.sub-menu__list {
+  @include dropMenu;
+}
+.menu__list li:hover .sub-menu__list {
+  display: block;
+}
+
+.sub-menu__list li {
+  line-height: 26px;
+}
+.menu .menu__list .menu__link i {
+  color: $colorGreen;
+  padding-left: 5px;
+}
+.menu  .menu__list .sub-menu__list .sub-menu__link a {
+  position: relative;
+  padding: 5px 0;
+}
+.menu  .menu__list .sub-menu__list .sub-menu__link i {
+  color: $colorGreen;
+  position: absolute;
+  right: 0;
+  padding-right: 20px;
+}
+
+
+.sub-menu__list li:hover .sub-sub-menu__list {
+  display: block;
+}
+.sub-sub-menu__list {
+  @include dropMenu;
+}
+.sub-sub-menu__list {
+  top: 0;
+  left: 100%;
+  background-color: $colorBgSubmenu2;
+  height: 100%;
+}
+.sub-sub-menu__list li {
+  line-height: 26px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .row {
   align-items: center;
@@ -47,7 +126,6 @@ header {
 @mixin contact {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
 }
 .contacts {
   @include contact;
@@ -94,12 +172,19 @@ header {
   position: absolute;
   top: 120px;
 }
-.slider_img {
-  background-image: url("../img/slide_01.png");
-  width: 1140px;
-  height: 670px;
-  position: relative;
-  z-index: 0;
+// .slider_img {
+//   background-image: url("../img/slide_01.png");
+//   width: 1140px;
+//   height: 670px;
+//   position: relative;
+//   z-index: 0;
+// }
+.slider__wrapper {
+  // background-image: url("../img/slide_01.png");
+    width: 1140px;
+    height: 670px;
+    position: relative;
+    z-index: 0
 }
 .slider__text_position {
   flex-direction: column;
@@ -138,21 +223,28 @@ header {
 .footer_descr {
   font-size: 14px;
 }
-.indicator {
+.slick-dots {
   position: absolute;
   width: auto;
   bottom: 0;
   margin-bottom: 200px;
   display: flex;
 }
-.indicator_1, .indicator_2, .indicator_3 {
-  display: block;
-  width: 13px;
-  height: 13px;
-  border-radius: 50%;
-  background-color: $colorInd;
-  margin: 0 9px;
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: $colorGreen;
 }
-.active {
-  background-color: $colorGreen;
+.slick-dots li button:before {
+  color: $colorInd;
+  opacity: 1;
+  font-size: 13px;
+  margin: 0 4px;
+  border: none;
+}
+
+
+
+.slick-prev.slick-arrow, .slick-next.slick-arrow {
+  display: none !important;
 }
