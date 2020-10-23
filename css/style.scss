@@ -133,22 +133,6 @@ header {
   line-height: 26px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .row {
   align-items: center;
 }
@@ -177,20 +161,26 @@ header {
 /*end of header*/
 
 /*slider*/
+.slider__text {
+
+}
 .brace {
   fill: $colorGreen;
   margin-right: 17px;
+  align-self: center;
 }
 .brace1 {
   fill: $colorGreen;
   transform: rotate(180deg);
   margin-left: 15px;
+  align-self: center;
 }
 .carousel-item {
   display: flex;
 }
 .slider__text {
   display: flex;
+  align-items: center;
 }
 .slider_pic {
   width: auto;
@@ -253,9 +243,9 @@ header {
 .slick-prev.slick-arrow, .slick-next.slick-arrow {
   display: none !important;
 }
-// .slick-track {
-//   max-width: 100% !important;
-// }
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
 
 .footer {
   font-family: $font;
@@ -332,46 +322,51 @@ header {
 }
 .slick-dots {
   top: 30%;
+  width: 50%;
 }
 .footer_title {
 font-size: 18px;
 line-height: 25px;
 }
-.footer {
-    bottom: 20%;
+
+.slider__text__sale {
+  font-size: 25px;
+  height: 30px;
 }
-  }
+.footer_title {
+font-size: 18px;
+line-height: 25px;
+}
+}
 
-  @media screen and (max-width: 670px) {
-    .slider .container .col-6 .slider__text {
-        top: 30px;
-      }
-    .slider__text__title {
-      font-size: 17px;
+  @media screen and (max-width: 490px) {
+    .footer {
+      bottom: 0;
     }
-    .slider__text__item {
-      font-size: 12px;
-    }
-    .footer_title {
-    font-size: 20px !important;
-    line-height: 80px;
-  }
-  .slick-dots {
-  top: 30%;
-  }
-  .footer_title {
-  font-size: 18px;
-  line-height: 25px;
-  }
-
-  }
-  @media screen and (max-width: 500px) {
     .slick-dots {
-    top: 30%;
-    width: 100%;
+    top: 27%;
+    }
+    .slick-dots li button:before {
+      font-size: 15px;
+    }
+  }
+  @media screen and (max-width: 420px) {
+    .slider_img img {
+      display: none;
+    }
+    .slick-dots {
+      width: 100%;
+    }
+    .col-6 {
+      width: 100%;
     }
     .footer {
-        bottom: 0;
+      bottom: 0;
     }
-
+    .slider_img {
+    height: 100vh;
+}
+.slick-dots {
+  height: auto;
+}
   }
