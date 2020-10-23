@@ -298,6 +298,10 @@ header {
     bottom: 50%; }
 
   .slider_img {
-    height: 100vh; } }
+    height: 100vh; }
+
+  .size {
+    height: 100vh;
+    min-height: 500px; } }
 
 /*# sourceMappingURL=style.css.map */
