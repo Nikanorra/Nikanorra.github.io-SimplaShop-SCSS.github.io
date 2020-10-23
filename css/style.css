@@ -295,12 +295,9 @@ header {
     width: 100%; }
 
   .footer {
-    bottom: 0; }
+    bottom: 50%; }
 
   .slider_img {
-    height: 100vh; }
-
-  .slick-dots {
-    height: auto; } }
+    height: 100vh; } }
 
 /*# sourceMappingURL=style.css.map */
