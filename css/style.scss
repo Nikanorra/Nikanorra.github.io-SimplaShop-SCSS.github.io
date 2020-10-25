@@ -1,7 +1,10 @@
 img {
   max-width: 100%;
-  min-width: 300px;
+  // min-width: 300px;
   height: auto;
+}
+.row {
+  display: flex;
 }
 
 $gradient: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(255,255,255,0) 100%);
@@ -20,11 +23,10 @@ $fontBold: "HelveticaNeueCyr-Bold", sans-serif;
 $fontRoman: "HelveticaNeueCyr-Roman", sans-serif;
 $border: 2px solid $colorGreen;
 
-.row {
-  display: flex;
-}
+
 .size {
-  background: $gradient;
+    height: 100vh;
+    background: $gradient;
 }
 @mixin headerMixin {
   // margin-top: 32px;
@@ -44,7 +46,7 @@ header {
   flex-wrap: wrap;
 }
 .logo {
-  max-width: 229px;
+  max-width: 200px;
   height: 65px;
   position: relative;
   display: flex;
@@ -262,7 +264,21 @@ header {
   font-size: 14px;
 }
 
+@media screen and (max-width: 1075px) {
+  .size .container .row .col-6 {
+  display: none;
+}
+.logo {
+    height: 60px;
+  }
+.logo div {
+  font-size: 9px;
+}
+}
 @media screen and (max-width: 950px) {
+  .logo {
+      height: 52px;
+    }
   .slick-dots {
     top: 50%;
   }
@@ -284,6 +300,9 @@ header {
   }
 
   @media screen and (max-width: 850px) {
+    .col-3 {
+      width: 100%;
+    }
   .slider .container .col-6 .slider__text {
       top: 50px;
     }
@@ -356,6 +375,7 @@ line-height: 25px;
     }
     .slick-dots {
       width: 100%;
+      top: 23%;
     }
     .col-6 {
       width: 100%;
@@ -366,7 +386,5 @@ line-height: 25px;
     .slider_img {
     min-height: 410px;
     }
-.size {
-  height: 100vh;
-}
+
   }
