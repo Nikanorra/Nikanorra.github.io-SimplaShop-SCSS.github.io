@@ -283,18 +283,22 @@ header {
 }
 
 @media screen and (max-width: 1075px) {
-  .row {
-    align-items: self-start;
-  }
-  .burger {
-    display: block;
-    fill: $colorText;
-  }
-  .col-3.logo, .col-3.contacts {
-    justify-content: flex-start;
-
-  }
-  .size .container .row .col-6 {
+.row {
+  align-items: self-start;
+}
+.burger {
+  display: block;
+  right: 0;
+  fill: $colorText;
+  position: absolute;
+}
+.wrap-menu svg {
+  position: relative;
+}
+.col-3.logo, .col-3.contacts {
+  justify-content: flex-start;
+}
+.size .container .row .col-6 {
   order: 1;
   width: 30%;
 }
@@ -329,76 +333,103 @@ header {
 
 }
 @media screen and (max-width: 950px) {
-  .logo {
-      height: 52px;
-    }
-  .slick-dots {
-    top: 50%;
+.logo {
+    height: 52px;
   }
-  .slider__text__title {
-    font-size: 25px;
-  }
-  .slider__text__item {
-    font-size: 18px;
-  }
-  .slider__text__sale {
-    font-size: 45px;
-  }
-  .slick-dots {
-    width: 50%;
-  }
-  .slick-dots li button:before {
-    font-size: 20px;
-  }
-  }
-
-  @media screen and (max-width: 850px) {
-    .col-3 {
-      width: 100%;
-    }
-  .slider .container .col-6 .slider__text {
-      top: 50px;
-    }
-  .slick-dots {
-    top: 40%;
-    }
-    .slider__text__title {
-      font-size: 20px;
-    }
-    .slider__text__item {
-      font-size: 15px;
-      margin-top: 15px;
-    }
-    .slider__text__sale {
-      font-size: 40px;
-    }
-    .footer_title {
-    font-size: 20px;
-    line-height: 40px;
+.slick-dots {
+  top: 50%;
 }
-  }
+.slider__text__title {
+  font-size: 25px;
+}
+.slider__text__item {
+  font-size: 18px;
+}
+.slider__text__sale {
+  font-size: 45px;
+}
+.slick-dots {
+  width: 50%;
+}
+.slick-dots li button:before {
+  font-size: 20px;
+}
+}
 
-  @media screen and (max-width: 670px) {
-    .slider .container .col-6 .slider__text {
+@media screen and (max-width: 850px) {
+  .col-3 {
+    width: 100%;
+  }
+.slider .container .col-6 .slider__text {
+    top: 50px;
+  }
+.slick-dots {
+  top: 40%;
+  }
+.slider__text__title {
+  font-size: 20px;
+}
+.slider__text__item {
+  font-size: 15px;
+  margin-top: 15px;
+}
+.slider__text__sale {
+  font-size: 40px;
+}
+.footer_title {
+font-size: 20px;
+line-height: 40px;
+}
+}
+
+@media screen and (max-width: 670px) {
+header .container .row {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.size .container .row .col-3 {
+  width: 100%;
+  order:1;
+  padding: 10px;
+}
+.size .container .row .col-6 {
+  order: 3;
+  padding: 10px;
+}
+.contacts {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.contacts p {
+  margin: 10px;
+}
+.contacts .contacts__text {
+    font-size: 12px;
+}
+.contacts .contacts__phone {
+    font-size: 13px;
+}
+.slider .container .col-6 .slider__text {
         top: 30px;
       }
-    .slider__text__title {
-      font-size: 17px;
-    }
-    .slider__text__item {
-      font-size: 12px;
-    }
-    .footer_title {
-    font-size: 20px !important;
-    line-height: 80px;
+.slider__text__title {
+  font-size: 17px;
+}
+.slider__text__item {
+  font-size: 12px;
+}
+.footer_title {
+  font-size: 20px !important;
+  line-height: 80px;
 }
 .slick-dots {
   top: 30%;
   width: 50%;
 }
 .footer_title {
-font-size: 18px;
-line-height: 25px;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 .slider__text__sale {
@@ -406,38 +437,38 @@ line-height: 25px;
   height: 30px;
 }
 .footer_title {
-font-size: 18px;
-line-height: 25px;
+  font-size: 18px;
+  line-height: 25px;
 }
 }
 
-  @media screen and (max-width: 490px) {
-    .footer {
-      bottom: 0;
-    }
-    .slick-dots {
-    top: 27%;
-    }
-    .slick-dots li button:before {
-      font-size: 15px;
-    }
-  }
-  @media screen and (max-width: 420px) {
-    .slider_img img {
-      display: none;
-    }
-    .slick-dots {
-      width: 100%;
-      top: 23%;
-    }
-    .col-6 {
-      width: 100%;
-    }
-    .footer {
-      bottom: 0;
-    }
-    .slider_img {
-    min-height: 410px;
-    }
+@media screen and (max-width: 490px) {
+  .footer {
+  bottom: 0;
+}
+.slick-dots {
+  top: 27%;
+}
+.slick-dots li button:before {
+  font-size: 15px;
+}
+}
+@media screen and (max-width: 420px) {
+.slider_img img {
+  display: none;
+}
+.slick-dots {
+  width: 100%;
+  top: 23%;
+}
+.col-6 {
+  width: 100%;
+}
+.footer {
+  bottom: 0;
+}
+.slider_img {
+  min-height: 410px;
+}
 
-  }
+}

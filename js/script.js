@@ -1,7 +1,5 @@
 
-
-	$(function(){
-
+	$(document).ready(function(){
 	  $('.slider__wrapper').slick({
 		  dots: true,
 		  infinite: true,
@@ -10,8 +8,14 @@
 		  fade: true,
 		  cssEase: 'linear',
 			autoplay: true,
-			mobileFirst: true,
+			mobileFirst: true
 
 		});
-
 	});
+
+
+	$(document).ready(function() {
+			$('.burger').click(function(event) {
+				$('.burger, .menu').toggleClass('active');
+			});
+});

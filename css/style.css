@@ -234,7 +234,12 @@ header {
 
   .burger {
     display: block;
-    fill: #363636; }
+    right: 0;
+    fill: #363636;
+    position: absolute; }
+
+  .wrap-menu svg {
+    position: relative; }
 
   .col-3.logo, .col-3.contacts {
     justify-content: flex-start; }
@@ -314,6 +319,33 @@ header {
     font-size: 20px;
     line-height: 40px; } }
 @media screen and (max-width: 670px) {
+  header .container .row {
+    flex-wrap: wrap;
+    justify-content: flex-start; }
+
+  .size .container .row .col-3 {
+    width: 100%;
+    order: 1;
+    padding: 10px; }
+
+  .size .container .row .col-6 {
+    order: 3;
+    padding: 10px; }
+
+  .contacts {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; }
+
+  .contacts p {
+    margin: 10px; }
+
+  .contacts .contacts__text {
+    font-size: 12px; }
+
+  .contacts .contacts__phone {
+    font-size: 13px; }
+
   .slider .container .col-6 .slider__text {
     top: 30px; }
 
