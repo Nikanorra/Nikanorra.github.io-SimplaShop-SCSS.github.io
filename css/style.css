@@ -36,7 +36,7 @@ header {
   bottom: 0; }
 
 .burger {
-  fill: #363636; }
+  display: none; }
 
 .menu > ul {
   display: flex;
@@ -229,6 +229,16 @@ header {
   font-size: 14px; }
 
 @media screen and (max-width: 1075px) {
+  .row {
+    align-items: self-start; }
+
+  .burger {
+    display: block;
+    fill: #363636; }
+
+  .col-3.logo, .col-3.contacts {
+    justify-content: flex-start; }
+
   .size .container .row .col-6 {
     order: 1;
     width: 30%; }
@@ -238,6 +248,12 @@ header {
 
   .size .container .row .col-6 .menu {
     display: none; }
+
+  .sub-menu__list {
+    top: 0; }
+
+  .sub-sub-menu__list {
+    left: 0; }
 
   .size .container .row .col-6 .menu.active {
     display: block; }
