@@ -58,5 +58,6 @@ width: calc(100% / 12 * 5);
 
 }
 [class*="col-"] {
-  padding: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
