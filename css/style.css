@@ -239,7 +239,8 @@ header {
     position: absolute; }
 
   .wrap-menu svg {
-    position: relative; }
+    position: relative;
+    padding-left: 10px; }
 
   .col-3.logo, .col-3.contacts {
     justify-content: flex-start; }
