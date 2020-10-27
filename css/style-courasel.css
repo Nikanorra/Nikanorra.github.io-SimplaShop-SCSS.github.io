@@ -1,3 +1,61 @@
+@charset "UTF-8";
+/*позиционирование надписи*/
+.courasel {
+  padding-top: 80px; }
 
+.courasel__content {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 130px; }
+
+.courasel__body .col-6 {
+  display: flex;
+  justify-content: center; }
+
+.brace__icon,
+.brace__icon-flip {
+  fill: #91c47e;
+  height: 120px;
+  margin: 0 17px; }
+
+.brace__icon-flip {
+  transform: rotate(180deg); }
+
+.courasel__para {
+  display: flex;
+  font-size: 23px;
+  margin-top: 10px; }
+
+/*стилизация*/
+.courasel__title {
+  font-size: 30px;
+  font-family: "HelveticaNeueCyr-Bold";
+  line-height: 40px; }
+
+.courasel__sale {
+  align-self: flex-end;
+  color: #91c47e;
+  font-size: 52px;
+  font-family: "HelveticaNeueCyr-Bold";
+  padding-left: 10px; }
+
+/*footer*/
+.courasel .container {
+  position: relative; }
+
+.courasel__footer {
+  text-align: center; }
+
+.footer__title {
+  font-size: 30px;
+  padding-bottom: 30px; }
+
+.footer__text {
+  line-height: 26px; }
+
+.courasel__footer {
+  position: absolute;
+  bottom: 0; }
 
 /*# sourceMappingURL=style-courasel.css.map */
