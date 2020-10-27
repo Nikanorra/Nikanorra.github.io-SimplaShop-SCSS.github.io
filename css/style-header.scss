@@ -156,7 +156,7 @@ i {
     top: 60px;
     position: absolute;
     display: block;
-    width: 60%;
+    width: 50%;
     display: none;
   }
   .menu__nav.active {
@@ -180,9 +180,21 @@ i {
 @media screen and (max-width: 900px) {
   .menu__ul {
     flex-direction: column;
+    background-color: $colorBgGrey;
+  }
+  .menu__list:hover {
+    @include borderBottom ($borderColor: $colorTransparent);
+  }
+  .menu__list a:hover {
+    @include borderBottom;
   }
   .menu__ul-sub {
     top: 0;
+    background-color: $baseColorMenuGreen;
+  }
+  .menu__ul-sub-sub {
+    top: 0;
+    background-color: $baseColorMenuGrey;
   }
   .col-3 {
     width: 50% !important;
@@ -196,12 +208,19 @@ i {
   [class*="col-"] {
     width: 100% !important;
   }
+  .contacts {
+    padding: 8px 0;
+  }
   .contacs__wrapper {
     align-items: flex-start;
     flex-direction: row;
   }
   .contacts__text {
+    font-size: 13px;
     line-height: 24px;
+  }
+  .contacts__phone {
+    font-size: 15px;
   }
   .col-6 {
     order: 3;
