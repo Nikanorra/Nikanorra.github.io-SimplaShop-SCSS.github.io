@@ -160,7 +160,10 @@
 }
 @media screen and (max-width: 550px) {
 .courasel .container .courasel__slick.slick-initialized.slick-slider.slick-dotted .slick-dots {
-  top: 33%;
+  top: 35%;
+}
+.courasel__footer {
+    top: 100%;
 }
 .footer__title {
     font-size: 18px;
