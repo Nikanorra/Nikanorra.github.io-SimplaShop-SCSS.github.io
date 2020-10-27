@@ -1,26 +1,23 @@
+$(document).ready(function(){
 
-	$(document).ready(function(){
-	  $('.slider__wrapper').slick({
-		  dots: true,
-		  infinite: true,
-		  speed: 1000,
-			autoplaySpeed: 5000,
-		  fade: true,
-		  cssEase: 'linear',
-			autoplay: true,
-			mobileFirst: true
+	 $('.menu__burger').click(function(event) {
+		 $('.menu__burger, .menu__nav').toggleClass('active');
+	 });
 
-		});
-
-		$('.burger').click(function(event) {
-			$('.burger, .menu').toggleClass('active');
-		});
-
-	});
-
-//
-// 	$(document).ready(function() {
-// 			$('.burger').click(function(event) {
-// 				$('.burger, .menu').toggleClass('active');
-// 			});
+// 	 $('.menu__burger').click(function(){
+// 	        $('.menu__burger, .menu').removeClass('active');
 // });
+
+});
+	// $(document).ready(function(){
+	//   $('.carousel').slick({
+	// 	  dots: true,
+	// 	  infinite: true,
+	// 	  speed: 1000,
+	// 		autoplaySpeed: 5000,
+	// 	  fade: true,
+	// 	  cssEase: 'linear',
+	// 		autoplay: true,
+	// 		mobileFirst: true
+	// 	});
+	// });

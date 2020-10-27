@@ -1,0 +1,218 @@
+@import "var.scss";
+
+@mixin borderBottom ($borderWidth: 2px, $borderStyle: solid, $borderColor: $colorGreen) {
+  border: {
+    bottom-width: $borderWidth;
+    bottom-style: $borderStyle;
+    bottom-color: $borderColor;
+  }
+}
+header {
+  background: $gradientHeader;
+  font-family: $fontThin;
+  font-size: $fontSize;
+  color: $colorText;
+  max-height: 65px;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: $colorText;
+}
+i {
+  color: $colorGreen;
+}
+/*позиционирование*/
+.header__fix {
+  display: fixed;
+}
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo__wrapper {
+  max-width: 230px;
+  display: flex;
+  flex-direction: column;
+}
+.logo__text {
+  align-self: flex-end;
+}
+.menu__ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacs__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/*стили logo*/
+.logo__text {
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+/*стили контактов*/
+.contacts__text {
+  font-family: $fontRoman;
+}
+.contacts__phone {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/*стили menu*/
+.fa-caret-down {
+  padding-left: 5px;
+}
+.menu__list {
+  @include borderBottom ($borderColor: $colorTransparent);
+  transition: $transitionTime;
+}
+.menu__list:hover {
+  @include borderBottom;
+}
+.menu__list {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.menu__burger {
+  display: none;
+}
+/*позиционирование выпадающее меню sub*/
+.menu__ul-sub {
+  display: none;
+  background-color: $baseColorMenuGreenRGBA;
+  position: absolute;
+  top: 24px;
+  padding-top: 10px;
+}
+.menu__ul {
+  position: relative;
+}
+
+/*отображение выпадающее меню sub*/
+.menu__ul li:hover .menu__ul-sub {
+  display: block;
+}
+/*стилизация выпадающее меню sub*/
+.menu__list-sub {
+  line-height: 26px;
+  color: #000;
+  font-family: $fontLight;
+  width: 250px;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: $transitionTime;
+}
+.menu__list-sub:hover {
+  background-color: $baseColorMenuGreyRGBA;
+}
+/*позиционирование выпадающее меню sub-sub*/
+.menu__ul-sub-sub {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 250px;
+  font-size: 12px;
+  background-color: $baseColorMenuGreyRGBA;
+  height: 100%;
+  display: none;
+}
+/*стилизация выпадающее меню sub-sub*/
+.menu__list-sub-sub a {
+  @include borderBottom ($borderColor: $colorTransparent);
+  transition: $transitionTime;
+  margin-left: 15px;
+}
+.menu__list-sub-sub a:hover {
+  @include borderBottom;
+}
+/*отображение выпадающее меню sub-sub*/
+.menu__ul-sub {
+  display: none;
+}
+.menu__ul-sub li:hover .menu__ul-sub-sub {
+  display: block;
+}
+
+
+/*@media*/
+@media screen and (max-width: 970px) {
+  .logo__text {
+    font-size: 10px;
+  }
+  .menu__nav {
+    top: 60px;
+    position: absolute;
+    display: block;
+    width: 60%;
+    display: none;
+  }
+  .menu__nav.active {
+    display: block;
+  }
+  .menu__burger {
+    display: block;
+  }
+  .col-3 {
+    order: 2
+  }
+  .menu__burger i {
+    font-size: 20px;
+    padding: 12px;
+    border-radius: 50%;
+    background-color: $colorGreen;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .menu__ul {
+    flex-direction: column;
+  }
+  .menu__ul-sub {
+    top: 0;
+  }
+  .col-3 {
+    width: 50% !important;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .header__wrapper {
+    flex-wrap: wrap;
+  }
+  [class*="col-"] {
+    width: 100% !important;
+  }
+  .contacs__wrapper {
+    align-items: flex-start;
+    flex-direction: row;
+  }
+  .contacts__text {
+    line-height: 24px;
+  }
+  .col-6 {
+    order: 3;
+  }
+  .menu__nav {
+    top: 140px;
+}
+}
+
+@media screen and (max-width: 525px) {
+  .menu__ul-sub-sub {
+    left: 0;
+  }
+}

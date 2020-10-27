@@ -1,0 +1,23 @@
+//colors
+$colorGreen: #91c47e;
+$colorTransparent: transparent;
+$colorText: #363636;
+$colorTextMenu: #000;
+$gradientHeader: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(255,255,255,0) 100%);
+$baseColorMenuGreenRGBA: rgba(215,233,206, 0.9);
+$baseColorMenuGreen: #dbebd2;
+$baseColorMenuGreyRGBA: rgba(242,242,242, 0.9);
+$baseColorMenuGrey: #f2f2f2;
+$colorBgGreen: fade-out(rgba($baseColorMenuGreenRGBA, 0.9), 0.1);
+$colorBgGrey: fade-out(rgba($baseColorMenuGreyRGBA, 0.9), 0.1);
+
+
+//fonts
+$fontSize: 14px;
+$fontThin: "HelveticaNeueCyr-Thin";
+$fontLight: "HelveticaNeueCyr-Light";
+$fontRoman: "HelveticaNeueCyr-Roman";
+$fontBold: "HelveticaNeueCyr-Bold";
+
+//transition
+$transitionTime: 1s;

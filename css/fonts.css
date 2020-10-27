@@ -5,6 +5,12 @@
   font-weight: normal;
 }
 @font-face {
+  font-family: "HelveticaNeueCyr-Light";
+  src:url("../fonts/HelveticaNeueCyr-Light.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
   font-family: "HelveticaNeueCyr-Roman";
   src:url("../fonts/HelveticaNeueCyr-Roman.ttf");
   font-style: normal;
