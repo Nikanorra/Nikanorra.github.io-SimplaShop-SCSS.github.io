@@ -85,7 +85,6 @@
 @media screen and (max-width: 730px) {
   .courasel__content {
     top: 50px;
-    background: #f9f9f9;
     background: radial-gradient(circle, #f9f9f9 0%, rgba(249, 249, 249, 0) 100%); }
 
   .courasel__footer {
@@ -99,5 +98,15 @@
 
   .footer__text {
     line-height: 18px; } }
+.courasel .container .courasel__slick.slick-initialized.slick-slider.slick-dotted .slick-dots {
+  bottom: 40%;
+  right: 40%; }
+
+.courasel .container .courasel__slick.slick-initialized.slick-slider.slick-dotted .slick-dots li button:before {
+  font-size: 13px;
+  color: #363636; }
+
+.courasel .container .courasel__slick.slick-initialized.slick-slider.slick-dotted .slick-dots .slick-active button:before {
+  color: #91c47e; }
 
 /*# sourceMappingURL=style-courasel.css.map */
