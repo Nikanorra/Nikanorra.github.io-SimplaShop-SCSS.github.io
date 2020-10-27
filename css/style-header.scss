@@ -185,7 +185,7 @@ i {
   .menu__list:hover {
     @include borderBottom ($borderColor: $colorTransparent);
   }
-  .menu__list a:hover {
+  .menu__list > a:hover {
     @include borderBottom;
   }
   .menu__ul-sub {
@@ -226,7 +226,10 @@ i {
     order: 3;
   }
   .menu__nav {
-    top: 140px;
+    top: 150px;
+    width: 200px;
+
+    background-color: $baseColorMenuGrey;
 }
 }
 

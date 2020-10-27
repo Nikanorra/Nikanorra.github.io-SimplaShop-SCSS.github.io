@@ -176,7 +176,7 @@ i {
     border-bottom-style: solid;
     border-bottom-color: transparent; }
 
-  .menu__list a:hover {
+  .menu__list > a:hover {
     border-bottom-width: 2px;
     border-bottom-style: solid;
     border-bottom-color: #91c47e; }
@@ -216,7 +216,9 @@ i {
     order: 3; }
 
   .menu__nav {
-    top: 140px; } }
+    top: 150px;
+    width: 200px;
+    background-color: #f2f2f2; } }
 @media screen and (max-width: 525px) {
   .menu__ul-sub-sub {
     left: 0; } }
