@@ -9,6 +9,7 @@
 		  fade: true,
 		  cssEase: 'linear',
 			autoplay: true,
-			mobileFirst: true
+			mobileFirst: true,
+			adaptiveHeight: true
 		});
 	});
